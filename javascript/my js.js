@@ -34,8 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", () => {
         const cardBody = button.closest(".card-body");
         const cardImg = document.querySelector('card-img-top');
-        cardBody.parentElement.removeChild(cardBody).removeChild(cardImg);
-        updateTotalPrice();
+        cardBody.parentElement.removeChild(cardBody);const removeCardBodyChildren = (cardBody) => {
+        while (cardBody.firstChild) {
+        cardBody.removeChild(cardBody.firstChild);
+      }
+    };
       });
     });
   
