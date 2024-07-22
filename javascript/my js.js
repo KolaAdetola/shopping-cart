@@ -32,13 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
     document.querySelectorAll(".fa-trash-alt").forEach(button => {
       button.addEventListener("click", () => {
-        const cardBody = button.closest(".card-body");
+        const cardBody = button.closest(".dell");
         const cardImg = document.querySelector('card-img-top');
-        cardBody.parentElement.removeChild(cardBody);const removeCardBodyChildren = (cardBody) => {
-        while (cardBody.firstChild) {
-        cardBody.removeChild(cardBody.firstChild);
-      }
-    };
+        cardBody.parentElement.removeChild(cardBody);
+      //   const removeCardBodyChildren = (cardBody) => {
+      //   while (cardBody.firstChild) {
+      //   cardBody.removeChild(cardBody.firstChild);
+      // }
+    // };
       });
     });
   
