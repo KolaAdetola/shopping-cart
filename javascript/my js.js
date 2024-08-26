@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // price updater
     const updateTotalPrice = () => {
       const totalElement = document.querySelector(".total");
       let totalPrice = 0;
@@ -9,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       totalElement.textContent = `${totalPrice} $`;
     };
-  
+  // price increaser
     document.querySelectorAll(".fa-plus-circle").forEach(button => {
       button.addEventListener("click", () => {
         const quantityElement = button.nextElementSibling;
@@ -18,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateTotalPrice();
       });
     });
-  
+  // price reducer
     document.querySelectorAll(".fa-minus-circle").forEach(button => {
       button.addEventListener("click", () => {
         const quantityElement = button.previousElementSibling;
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
-  
+  // deleting product card
     document.querySelectorAll(".fa-trash-alt").forEach(button => {
       button.addEventListener("click", () => {
         const cardBody = button.closest(".dell");
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // };
       });
     });
-  
+  // price updater
     document.querySelectorAll(".fa-heart").forEach(button => {
       button.addEventListener("click", () => {
         button.classList.toggle("liked");
